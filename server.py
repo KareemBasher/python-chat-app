@@ -35,16 +35,16 @@ def handle_client_connection(conn, addr):
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # get local machine name
-host = '0.0.0.0'
+host = 'eshfeeny.onrender.com'
 
-# specify a port for client to connect
-port = 5050
+# specify a port to connect
+port = 443
 
 # bind the socket to a public host and port
-server_socket.bind((host, port))
+server_socket.connect((host, port))
 
 # listen for incoming connections
-server_socket.listen()
+# server_socket.listen()
 
 print('Waiting for clients to connect...', 'running on:', host, port)
 
