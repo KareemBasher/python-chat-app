@@ -5,10 +5,10 @@ import threading
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # get local machine name
-host = socket.gethostname()
+host = '0.0.0.0'
 
 # specify a port to connect
-port = 5000
+port = 5050
 
 # connect to the server
 client_socket.connect((host, port))

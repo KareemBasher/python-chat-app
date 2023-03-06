@@ -33,10 +33,10 @@ def handle_client_connection(conn, addr):
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # get local machine name
-host = socket.gethostname()
+host = '0.0.0.0'
 
 # specify a port for client to connect
-port = 5000
+port = 5050
 
 # bind the socket to a public host and port
 server_socket.bind((host, port))
@@ -44,7 +44,7 @@ server_socket.bind((host, port))
 # listen for incoming connections
 server_socket.listen()
 
-print('Waiting for clients to connect...')
+print('Waiting for clients to connect...', 'running on:', host, port)
 
 # list of connected clients
 clients = []
