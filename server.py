@@ -1,5 +1,3 @@
-#! /usr/bin/python3
-
 import socket
 import threading
 
@@ -35,18 +33,18 @@ def handle_client_connection(conn, addr):
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # get local machine name
-host = 'eshfeeny.onrender.com'
+host = socket.gethostname()
 
-# specify a port to connect
-port = 443
+# specify a port for client to connect
+port = 5000
 
 # bind the socket to a public host and port
-server_socket.connect((host, port))
+server_socket.bind((host, port))
 
 # listen for incoming connections
-# server_socket.listen()
+server_socket.listen()
 
-print('Waiting for clients to connect...', 'running on:', host, port)
+print('Waiting for clients to connect...')
 
 # list of connected clients
 clients = []

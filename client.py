@@ -5,10 +5,10 @@ import threading
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # get local machine name
-host = 'eshfeeny.onrender.com'
+host = socket.gethostname()
 
 # specify a port to connect
-port = 443
+port = 5000
 
 # connect to the server
 client_socket.connect((host, port))
