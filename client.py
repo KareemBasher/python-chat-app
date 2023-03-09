@@ -1,3 +1,5 @@
+#! python3
+
 from tkinter.font import BOLD
 from matplotlib.colors import cnames
 from tkinter import *
