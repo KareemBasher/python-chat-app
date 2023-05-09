@@ -47,6 +47,7 @@ server_socket.bind((host, port))
 server_socket.listen()
 
 print('Waiting for clients to connect...')
+print('Host IP:', socket.gethostbyname(host))
 
 # list of connected clients
 clients = []
